@@ -110,3 +110,4 @@ Evidence: GitHub → Actions → **Release Pipeline** → run for `main` / tag `
 | 8 | Infrastructure | Single `t2.micro` EC2 | Chose Kubernetes (3 replicas, rolling update) |
 | 9 | Rollback | Empty script, no plan | Implemented `kubectl rollout undo` to `v2.2.0` |
 | 10 | Documentation | Missing release pack | Created `RELEASE_READINESS.md` + approval matrix |
+
