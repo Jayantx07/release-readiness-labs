@@ -7,11 +7,11 @@ metadata:
     version: v2.3.0
 spec:
   replicas: 3
-  revisionHistoryLimit: 5          # keeps old versions so rollback is possible
+  revisionHistoryLimit: 5          
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailable: 0            # zero downtime
+      maxUnavailable: 0            
       maxSurge: 1
   selector:
     matchLabels:
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: lab-app
-        image: lab-app:v2.3.0        # immutable version tag, never "production-build"/"latest"
+        image: lab-app:v2.3.0        
         ports:
         - containerPort: 3000
         env:

@@ -1,13 +1,9 @@
 environment: production
 release_version: v2.3.0
 image: lab-app:v2.3.0
-image_tag: v2.3.0              # immutable, matches git tag v2.3.0
-infrastructure: kubernetes     # 3 replicas, rolling update, LoadBalancer service
-approval_required: true        # GitHub environment "production" with required reviewer
-
-# Secret VALUES are never stored in git.
-# They live in GitHub -> Settings -> Environments -> production -> Secrets
-# and are injected into a Kubernetes Secret named "lab-app-secrets" at deploy time.
+image_tag: v2.3.0              
+infrastructure: kubernetes     
+approval_required: true        
 secrets:
   API_KEY: ${API_KEY}
   DATABASE_PASSWORD: ${DATABASE_PASSWORD}
